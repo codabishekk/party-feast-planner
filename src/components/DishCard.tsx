@@ -25,7 +25,7 @@ const DishCard = ({
     <Card className="overflow-hidden bg-card border border-border shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
       <div className="relative">
         <img
-          src={dish.image}
+          src={dish.image || "src/assets/kadhai-paneer.jpg"}
           alt={dish.name}
           className="w-full h-32 object-cover"
         />

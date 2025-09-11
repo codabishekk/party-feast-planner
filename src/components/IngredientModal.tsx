@@ -33,7 +33,7 @@ const IngredientModal = ({ dish, isOpen, onClose }: IngredientModalProps) => {
         <div className="space-y-4">
           <div className="relative">
             <img
-              src={dish.image}
+              src={dish.image || "src/assets/kadhai-paneer.jpg"}
               alt={dish.name}
               className="w-full h-48 object-cover rounded-lg"
             />
@@ -61,21 +61,32 @@ const IngredientModal = ({ dish, isOpen, onClose }: IngredientModalProps) => {
             <h3 className="font-semibold text-card-foreground mb-3">Ingredients</h3>
             <p className="text-xs text-muted-foreground mb-3">For 2 people</p>
             
-            <div className="space-y-2">
-              {dish.ingredients.map((ingredient, index) => (
-                <div 
-                  key={index}
-                  className="flex justify-between items-center py-2 border-b border-border last:border-b-0"
-                >
-                  <span className="text-sm text-card-foreground">
-                    {ingredient.name}
-                  </span>
-                  <span className="text-sm text-muted-foreground">
-                    {ingredient.quantity}
-                  </span>
-                </div>
-              ))}
-            </div>
+            {dish.ingredients && dish.ingredients.length > 0 ? (
+              <div className="space-y-2">
+                {dish.ingredients.map((ingredient, index) => (
+                  <div 
+                    key={index}
+                    className="flex justify-between items-center py-2 border-b border-border last:border-b-0"
+                  >
+                    <span className="text-sm text-card-foreground">
+                      {ingredient.name}
+                    </span>
+                    <span className="text-sm text-muted-foreground">
+                      {ingredient.quantity}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-6">
+                <p className="text-muted-foreground text-sm">
+                  Ingredient information not available for this dish
+                </p>
+                <p className="text-xs text-muted-foreground mt-1">
+                  Category: {dish.category.name} • Type: {dish.dishType}
+                </p>
+              </div>
+            )}
           </div>
         </div>
       </DialogContent>

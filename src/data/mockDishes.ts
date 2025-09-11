@@ -3,196 +3,712 @@ export interface Ingredient {
   quantity: string;
 }
 
+export interface Category {
+  id: number;
+  name: string;
+  image: string;
+  isRecommendedForMealSuggestion: boolean;
+}
+
 export interface Dish {
   id: number;
   name: string;
   description: string;
-  image: string;
+  image: string | null;
   mealType: "STARTER" | "MAIN COURSE" | "DESSERT" | "SIDES";
   type: "VEG" | "NON-VEG";
-  ingredients: Ingredient[];
+  categoryId: number;
+  category: Category;
+  dishType: string;
+  forChefit: boolean;
+  forParty: boolean;
+  nameHi: string;
+  nameBn: string;
+  ingredients?: Ingredient[]; // Made optional since new data doesn't include it
 }
 
 export const dishes: Dish[] = [
-  // STARTER dishes
+  // Main Course dishes - Your provided data
   {
+    categoryId: 1,
+    mealType: "MAIN COURSE",
+    type: "VEG",
+    description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
+    image: "src/assets/kadhai-paneer.jpg",
+    category: {
+      id: 1,
+      name: "North Indian",
+      image: "https://storage.googleapis.com/chefkartimages/customer_app_assets/star_chef/north_indian.png",
+      isRecommendedForMealSuggestion: true
+    },
+    dishType: "CURRY",
+    forChefit: true,
+    forParty: true,
+    nameHi: "",
+    nameBn: "",
     id: 1,
-    name: "Tandoori Chicken",
+    name: "Kadhai Paneer 1"
+  },
+  {
+    categoryId: 1,
+    mealType: "MAIN COURSE",
+    type: "VEG",
+    description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
+    image: "src/assets/kadhai-paneer.jpg",
+    category: {
+      id: 1,
+      name: "North Indian",
+      image: "https://storage.googleapis.com/chefkartimages/customer_app_assets/star_chef/north_indian.png",
+      isRecommendedForMealSuggestion: true
+    },
+    dishType: "CURRY",
+    forChefit: true,
+    forParty: true,
+    nameHi: "",
+    nameBn: "",
+    id: 2,
+    name: "Kadhai Paneer 2"
+  },
+  {
+    categoryId: 1,
+    mealType: "MAIN COURSE",
+    type: "VEG",
+    description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
+    image: "src/assets/kadhai-paneer.jpg",
+    category: {
+      id: 1,
+      name: "North Indian",
+      image: "https://storage.googleapis.com/chefkartimages/customer_app_assets/star_chef/north_indian.png",
+      isRecommendedForMealSuggestion: true
+    },
+    dishType: "CURRY",
+    forChefit: true,
+    forParty: true,
+    nameHi: "",
+    nameBn: "",
+    id: 3,
+    name: "Kadhai Paneer 3"
+  },
+  {
+    categoryId: 1,
+    mealType: "MAIN COURSE",
+    type: "VEG",
+    description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
+    image: "src/assets/kadhai-paneer.jpg",
+    category: {
+      id: 1,
+      name: "North Indian",
+      image: "https://storage.googleapis.com/chefkartimages/customer_app_assets/star_chef/north_indian.png",
+      isRecommendedForMealSuggestion: true
+    },
+    dishType: "CURRY",
+    forChefit: true,
+    forParty: true,
+    nameHi: "",
+    nameBn: "",
+    id: 4,
+    name: "Kadhai Paneer 4"
+  },
+  {
+    categoryId: 1,
+    mealType: "MAIN COURSE",
+    type: "VEG",
+    description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
+    image: "src/assets/kadhai-paneer.jpg",
+    category: {
+      id: 1,
+      name: "North Indian",
+      image: "https://storage.googleapis.com/chefkartimages/customer_app_assets/star_chef/north_indian.png",
+      isRecommendedForMealSuggestion: true
+    },
+    dishType: "CURRY",
+    forChefit: true,
+    forParty: true,
+    nameHi: "",
+    nameBn: "",
+    id: 5,
+    name: "Kadhai Paneer 5"
+  },
+  {
+    categoryId: 1,
+    mealType: "MAIN COURSE",
+    type: "VEG",
+    description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
+    image: "src/assets/kadhai-paneer.jpg",
+    category: {
+      id: 1,
+      name: "North Indian",
+      image: "https://storage.googleapis.com/chefkartimages/customer_app_assets/star_chef/north_indian.png",
+      isRecommendedForMealSuggestion: true
+    },
+    dishType: "CURRY",
+    forChefit: true,
+    forParty: true,
+    nameHi: "",
+    nameBn: "",
+    id: 6,
+    name: "Kadhai Paneer 6"
+  },
+  {
+    categoryId: 1,
+    mealType: "MAIN COURSE",
+    type: "VEG",
+    description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
+    image: "src/assets/dal-makhani.jpg",
+    category: {
+      id: 1,
+      name: "North Indian",
+      image: "https://storage.googleapis.com/chefkartimages/customer_app_assets/star_chef/north_indian.png",
+      isRecommendedForMealSuggestion: true
+    },
+    dishType: "CURRY",
+    forChefit: true,
+    forParty: true,
+    nameHi: "",
+    nameBn: "",
+    id: 7,
+    name: "Kadhai Paneer 7"
+  },
+  {
+    categoryId: 1,
+    mealType: "MAIN COURSE",
+    type: "VEG",
+    description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
+    image: "src/assets/dal-makhani.jpg",
+    category: {
+      id: 1,
+      name: "North Indian",
+      image: "https://storage.googleapis.com/chefkartimages/customer_app_assets/star_chef/north_indian.png",
+      isRecommendedForMealSuggestion: true
+    },
+    dishType: "CURRY",
+    forChefit: true,
+    forParty: true,
+    nameHi: "",
+    nameBn: "",
+    id: 8,
+    name: "Kadhai Paneer 8"
+  },
+  {
+    categoryId: 1,
+    mealType: "MAIN COURSE",
+    type: "VEG",
+    description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
+    image: "src/assets/dal-makhani.jpg",
+    category: {
+      id: 1,
+      name: "North Indian",
+      image: "https://storage.googleapis.com/chefkartimages/customer_app_assets/star_chef/north_indian.png",
+      isRecommendedForMealSuggestion: true
+    },
+    dishType: "CURRY",
+    forChefit: true,
+    forParty: true,
+    nameHi: "",
+    nameBn: "",
+    id: 9,
+    name: "Kadhai Paneer 9"
+  },
+  {
+    categoryId: 1,
+    mealType: "MAIN COURSE",
+    type: "VEG",
+    description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
+    image: "src/assets/dal-makhani.jpg",
+    category: {
+      id: 1,
+      name: "North Indian",
+      image: "https://storage.googleapis.com/chefkartimages/customer_app_assets/star_chef/north_indian.png",
+      isRecommendedForMealSuggestion: true
+    },
+    dishType: "CURRY",
+    forChefit: true,
+    forParty: true,
+    nameHi: "",
+    nameBn: "",
+    id: 10,
+    name: "Kadhai Paneer 10"
+  },
+  {
+    categoryId: 1,
+    mealType: "MAIN COURSE",
+    type: "VEG",
+    description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
+    image: "src/assets/kadhai-paneer.jpg",
+    category: {
+      id: 1,
+      name: "North Indian",
+      image: "https://storage.googleapis.com/chefkartimages/customer_app_assets/star_chef/north_indian.png",
+      isRecommendedForMealSuggestion: true
+    },
+    dishType: "CURRY",
+    forChefit: true,
+    forParty: true,
+    nameHi: "",
+    nameBn: "",
+    id: 11,
+    name: "Kadhai Paneer 11"
+  },
+  {
+    categoryId: 1,
+    mealType: "MAIN COURSE",
+    type: "VEG",
+    description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
+    image: "src/assets/kadhai-paneer.jpg",
+    category: {
+      id: 1,
+      name: "North Indian",
+      image: "https://storage.googleapis.com/chefkartimages/customer_app_assets/star_chef/north_indian.png",
+      isRecommendedForMealSuggestion: true
+    },
+    dishType: "CURRY",
+    forChefit: true,
+    forParty: true,
+    nameHi: "",
+    nameBn: "",
+    id: 12,
+    name: "Kadhai Paneer 12"
+  },
+  {
+    categoryId: 1,
+    mealType: "MAIN COURSE",
+    type: "VEG",
+    description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
+    image: "src/assets/kadhai-paneer.jpg",
+    category: {
+      id: 1,
+      name: "North Indian",
+      image: "https://storage.googleapis.com/chefkartimages/customer_app_assets/star_chef/north_indian.png",
+      isRecommendedForMealSuggestion: true
+    },
+    dishType: "CURRY",
+    forChefit: true,
+    forParty: true,
+    nameHi: "",
+    nameBn: "",
+    id: 13,
+    name: "Kadhai Paneer 13"
+  },
+  {
+    categoryId: 1,
+    mealType: "MAIN COURSE",
+    type: "VEG",
+    description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
+    image: "src/assets/dal-makhani.jpg",
+    category: {
+      id: 1,
+      name: "North Indian",
+      image: "https://storage.googleapis.com/chefkartimages/customer_app_assets/star_chef/north_indian.png",
+      isRecommendedForMealSuggestion: true
+    },
+    dishType: "CURRY",
+    forChefit: true,
+    forParty: true,
+    nameHi: "",
+    nameBn: "",
+    id: 14,
+    name: "Kadhai Paneer 14"
+  },
+  {
+    categoryId: 1,
+    mealType: "MAIN COURSE",
+    type: "VEG",
+    description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
+    image: "src/assets/dal-makhani.jpg",
+    category: {
+      id: 1,
+      name: "North Indian",
+      image: "https://storage.googleapis.com/chefkartimages/customer_app_assets/star_chef/north_indian.png",
+      isRecommendedForMealSuggestion: true
+    },
+    dishType: "CURRY",
+    forChefit: true,
+    forParty: true,
+    nameHi: "",
+    nameBn: "",
+    id: 15,
+    name: "Kadhai Paneer 15"
+  },
+  {
+    categoryId: 1,
+    mealType: "MAIN COURSE",
+    type: "VEG",
+    description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
+    image: "src/assets/dal-makhani.jpg",
+    category: {
+      id: 1,
+      name: "North Indian",
+      image: "https://storage.googleapis.com/chefkartimages/customer_app_assets/star_chef/north_indian.png",
+      isRecommendedForMealSuggestion: true
+    },
+    dishType: "CURRY",
+    forChefit: true,
+    forParty: true,
+    nameHi: "",
+    nameBn: "",
+    id: 16,
+    name: "Kadhai Paneer 16"
+  },
+  {
+    categoryId: 1,
+    mealType: "MAIN COURSE",
+    type: "VEG",
+    description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
+    image: "src/assets/kadhai-paneer.jpg",
+    category: {
+      id: 1,
+      name: "North Indian",
+      image: "https://storage.googleapis.com/chefkartimages/customer_app_assets/star_chef/north_indian.png",
+      isRecommendedForMealSuggestion: true
+    },
+    dishType: "CURRY",
+    forChefit: true,
+    forParty: true,
+    nameHi: "",
+    nameBn: "",
+    id: 17,
+    name: "Kadhai Paneer 17"
+  },
+  {
+    categoryId: 1,
+    mealType: "MAIN COURSE",
+    type: "VEG",
+    description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
+    image: "src/assets/kadhai-paneer.jpg",
+    category: {
+      id: 1,
+      name: "North Indian",
+      image: "https://storage.googleapis.com/chefkartimages/customer_app_assets/star_chef/north_indian.png",
+      isRecommendedForMealSuggestion: true
+    },
+    dishType: "CURRY",
+    forChefit: true,
+    forParty: true,
+    nameHi: "",
+    nameBn: "",
+    id: 18,
+    name: "Kadhai Paneer 18"
+  },
+  {
+    categoryId: 1,
+    mealType: "MAIN COURSE",
+    type: "VEG",
+    description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
+    image: "src/assets/kadhai-paneer.jpg",
+    category: {
+      id: 1,
+      name: "North Indian",
+      image: "https://storage.googleapis.com/chefkartimages/customer_app_assets/star_chef/north_indian.png",
+      isRecommendedForMealSuggestion: true
+    },
+    dishType: "CURRY",
+    forChefit: true,
+    forParty: true,
+    nameHi: "",
+    nameBn: "",
+    id: 19,
+    name: "Kadhai Paneer 19"
+  },
+  {
+    categoryId: 1,
+    mealType: "MAIN COURSE",
+    type: "VEG",
+    description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
+    image: "src/assets/dal-makhani.jpg",
+    category: {
+      id: 1,
+      name: "North Indian",
+      image: "https://storage.googleapis.com/chefkartimages/customer_app_assets/star_chef/north_indian.png",
+      isRecommendedForMealSuggestion: true
+    },
+    dishType: "CURRY",
+    forChefit: true,
+    forParty: true,
+    nameHi: "",
+    nameBn: "",
+    id: 20,
+    name: "Kadhai Paneer 20"
+  },
+  {
+    categoryId: 1,
+    mealType: "MAIN COURSE",
+    type: "VEG",
+    description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
+    image: "src/assets/dal-makhani.jpg",
+    category: {
+      id: 1,
+      name: "North Indian",
+      image: "https://storage.googleapis.com/chefkartimages/customer_app_assets/star_chef/north_indian.png",
+      isRecommendedForMealSuggestion: true
+    },
+    dishType: "CURRY",
+    forChefit: true,
+    forParty: true,
+    nameHi: "",
+    nameBn: "",
+    id: 21,
+    name: "Kadhai Paneer 21"
+  },
+  {
+    categoryId: 1,
+    mealType: "MAIN COURSE",
+    type: "VEG",
+    description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
+    image: "src/assets/dal-makhani.jpg",
+    category: {
+      id: 1,
+      name: "North Indian",
+      image: "https://storage.googleapis.com/chefkartimages/customer_app_assets/star_chef/north_indian.png",
+      isRecommendedForMealSuggestion: true
+    },
+    dishType: "CURRY",
+    forChefit: true,
+    forParty: true,
+    nameHi: "",
+    nameBn: "",
+    id: 22,
+    name: "Kadhai Paneer 22"
+  },
+  {
+    categoryId: 1,
+    mealType: "MAIN COURSE",
+    type: "VEG",
+    description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
+    image: "src/assets/kadhai-paneer.jpg",
+    category: {
+      id: 1,
+      name: "North Indian",
+      image: "https://storage.googleapis.com/chefkartimages/customer_app_assets/star_chef/north_indian.png",
+      isRecommendedForMealSuggestion: true
+    },
+    dishType: "CURRY",
+    forChefit: true,
+    forParty: true,
+    nameHi: "",
+    nameBn: "",
+    id: 23,
+    name: "Kadhai Paneer 23"
+  },
+  {
+    categoryId: 1,
+    mealType: "MAIN COURSE",
+    type: "VEG",
+    description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
+    image: "src/assets/kadhai-paneer.jpg",
+    category: {
+      id: 1,
+      name: "North Indian",
+      image: "https://storage.googleapis.com/chefkartimages/customer_app_assets/star_chef/north_indian.png",
+      isRecommendedForMealSuggestion: true
+    },
+    dishType: "CURRY",
+    forChefit: true,
+    forParty: true,
+    nameHi: "",
+    nameBn: "",
+    id: 24,
+    name: "Kadhai Paneer 24"
+  },
+  {
+    categoryId: 1,
+    mealType: "MAIN COURSE",
+    type: "VEG",
+    description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
+    image: "src/assets/kadhai-paneer.jpg",
+    category: {
+      id: 1,
+      name: "North Indian",
+      image: "https://storage.googleapis.com/chefkartimages/customer_app_assets/star_chef/north_indian.png",
+      isRecommendedForMealSuggestion: true
+    },
+    dishType: "CURRY",
+    forChefit: true,
+    forParty: true,
+    nameHi: "",
+    nameBn: "",
+    id: 25,
+    name: "Kadhai Paneer 25"
+  },
+  {
+    categoryId: 1,
+    mealType: "MAIN COURSE",
+    type: "VEG",
+    description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
+    image: "src/assets/dal-makhani.jpg",
+    category: {
+      id: 1,
+      name: "North Indian",
+      image: "https://storage.googleapis.com/chefkartimages/customer_app_assets/star_chef/north_indian.png",
+      isRecommendedForMealSuggestion: true
+    },
+    dishType: "CURRY",
+    forChefit: true,
+    forParty: true,
+    nameHi: "",
+    nameBn: "",
+    id: 26,
+    name: "Kadhai Paneer 26"
+  },
+  {
+    categoryId: 1,
+    mealType: "MAIN COURSE",
+    type: "VEG",
+    description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
+    image: "src/assets/dal-makhani.jpg",
+    category: {
+      id: 1,
+      name: "North Indian",
+      image: "https://storage.googleapis.com/chefkartimages/customer_app_assets/star_chef/north_indian.png",
+      isRecommendedForMealSuggestion: true
+    },
+    dishType: "CURRY",
+    forChefit: true,
+    forParty: true,
+    nameHi: "",
+    nameBn: "",
+    id: 27,
+    name: "Kadhai Paneer 27"
+  },
+  {
+    categoryId: 1,
+    mealType: "MAIN COURSE",
+    type: "VEG",
+    description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
+    image: "src/assets/dal-makhani.jpg",
+    category: {
+      id: 1,
+      name: "North Indian",
+      image: "https://storage.googleapis.com/chefkartimages/customer_app_assets/star_chef/north_indian.png",
+      isRecommendedForMealSuggestion: true
+    },
+    dishType: "CURRY",
+    forChefit: true,
+    forParty: true,
+    nameHi: "",
+    nameBn: "",
+    id: 28,
+    name: "Kadhai Paneer 28"
+  },
+  {
+    categoryId: 1,
+    mealType: "MAIN COURSE",
+    type: "VEG",
+    description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
+    image: "src/assets/kadhai-paneer.jpg",
+    category: {
+      id: 1,
+      name: "North Indian",
+      image: "https://storage.googleapis.com/chefkartimages/customer_app_assets/star_chef/north_indian.png",
+      isRecommendedForMealSuggestion: true
+    },
+    dishType: "CURRY",
+    forChefit: true,
+    forParty: true,
+    nameHi: "",
+    nameBn: "",
+    id: 29,
+    name: "Kadhai Paneer 29"
+  },
+  {
+    categoryId: 1,
+    mealType: "MAIN COURSE",
+    type: "VEG",
+    description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
+    image: "src/assets/kadhai-paneer.jpg",
+    category: {
+      id: 1,
+      name: "North Indian",
+      image: "https://storage.googleapis.com/chefkartimages/customer_app_assets/star_chef/north_indian.png",
+      isRecommendedForMealSuggestion: true
+    },
+    dishType: "CURRY",
+    forChefit: true,
+    forParty: true,
+    nameHi: "",
+    nameBn: "",
+    id: 30,
+    name: "Kadhai Paneer 30"
+  },
+
+  // Additional sample dishes for other categories
+  {
+    categoryId: 2,
+    mealType: "STARTER",
+    type: "VEG",
+    description: "Crispy vegetable spring rolls served with sweet and sour sauce",
+    image: "src/assets/cabbage-rolls.jpg",
+    category: {
+      id: 2,
+      name: "Chinese",
+      image: "https://storage.googleapis.com/chefkartimages/customer_app_assets/star_chef/chinese.png",
+      isRecommendedForMealSuggestion: true
+    },
+    dishType: "APPETIZER",
+    forChefit: true,
+    forParty: true,
+    nameHi: "",
+    nameBn: "",
+    id: 31,
+    name: "Vegetable Spring Rolls"
+  },
+  {
+    categoryId: 1,
+    mealType: "STARTER",
+    type: "NON-VEG",
     description: "Succulent chicken marinated in yogurt and spices, cooked in tandoor",
     image: "src/assets/tandoori-chicken.jpg",
-    mealType: "STARTER",
-    type: "NON-VEG",
-    ingredients: [
-      { name: "Chicken", quantity: "500g" },
-      { name: "Yogurt", quantity: "1 cup" },
-      { name: "Ginger-Garlic Paste", quantity: "2 tbsp" },
-      { name: "Tandoori Masala", quantity: "3 tbsp" },
-      { name: "Red Chili Powder", quantity: "1 tsp" },
-      { name: "Lemon Juice", quantity: "2 tbsp" }
-    ]
+    category: {
+      id: 1,
+      name: "North Indian",
+      image: "https://storage.googleapis.com/chefkartimages/customer_app_assets/star_chef/north_indian.png",
+      isRecommendedForMealSuggestion: true
+    },
+    dishType: "GRILLED",
+    forChefit: true,
+    forParty: true,
+    nameHi: "",
+    nameBn: "",
+    id: 32,
+    name: "Tandoori Chicken"
   },
   {
-    id: 2,
-    name: "Paneer Tikka",
-    description: "Grilled cubes of paneer marinated in spicy yogurt mixture",
-    image: "src/assets/kadhai-paneer.jpg",
-    mealType: "STARTER", 
-    type: "VEG",
-    ingredients: [
-      { name: "Paneer", quantity: "300g" },
-      { name: "Yogurt", quantity: "1/2 cup" },
-      { name: "Bell Peppers", quantity: "2 medium" },
-      { name: "Onion", quantity: "1 large" },
-      { name: "Garam Masala", quantity: "1 tsp" }
-    ]
-  },
-  {
-    id: 3,
-    name: "Chicken Wings",
-    description: "Crispy chicken wings with spicy coating and herbs",
-    image: "src/assets/tandoori-chicken.jpg",
-    mealType: "STARTER",
-    type: "NON-VEG",
-    ingredients: [
-      { name: "Chicken Wings", quantity: "1kg" },
-      { name: "Hot Sauce", quantity: "1/4 cup" },
-      { name: "Butter", quantity: "3 tbsp" },
-      { name: "Garlic Powder", quantity: "1 tsp" },
-      { name: "Paprika", quantity: "1 tbsp" }
-    ]
-  },
-
-  // MAIN COURSE dishes
-  {
-    id: 4,
-    name: "Dal Makhani",
-    description: "Rich and creamy black lentil curry slow-cooked with butter and cream",
-    image: "src/assets/dal-makhani.jpg",
-    mealType: "MAIN COURSE",
-    type: "VEG",
-    ingredients: [
-      { name: "Black Urad Dal", quantity: "1 cup" },
-      { name: "Kidney Beans", quantity: "1/4 cup" },
-      { name: "Tomato Puree", quantity: "1/2 cup" },
-      { name: "Heavy Cream", quantity: "1/4 cup" },
-      { name: "Butter", quantity: "3 tbsp" },
-      { name: "Ginger-Garlic Paste", quantity: "1 tbsp" }
-    ]
-  },
-  {
-    id: 5,
-    name: "Kadhai Paneer",
-    description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes",
-    image: "src/assets/kadhai-paneer.jpg", 
-    mealType: "MAIN COURSE",
-    type: "VEG",
-    ingredients: [
-      { name: "Paneer", quantity: "400g" },
-      { name: "Bell Peppers", quantity: "2 large" },
-      { name: "Onions", quantity: "2 medium" },
-      { name: "Tomatoes", quantity: "3 medium" },
-      { name: "Kadhai Masala", quantity: "2 tbsp" },
-      { name: "Ginger", quantity: "1 inch piece" }
-    ]
-  },
-  {
-    id: 6,
-    name: "Chicken Curry",
-    description: "Traditional chicken curry with aromatic spices and rich gravy",
-    image: "src/assets/tandoori-chicken.jpg",
-    mealType: "MAIN COURSE",
-    type: "NON-VEG",
-    ingredients: [
-      { name: "Chicken", quantity: "750g" },
-      { name: "Onions", quantity: "3 medium" },
-      { name: "Tomatoes", quantity: "4 medium" },
-      { name: "Coconut Milk", quantity: "1 cup" },
-      { name: "Curry Powder", quantity: "3 tbsp" },
-      { name: "Turmeric", quantity: "1 tsp" }
-    ]
-  },
-
-  // DESSERT dishes
-  {
-    id: 7,
-    name: "Gulab Jamun",
-    description: "Soft milk dumplings in sweet rose-flavored syrup",
-    image: "src/assets/cabbage-rolls.jpg",
+    categoryId: 1,
     mealType: "DESSERT",
     type: "VEG",
-    ingredients: [
-      { name: "Milk Powder", quantity: "1 cup" },
-      { name: "All-purpose Flour", quantity: "2 tbsp" },
-      { name: "Sugar", quantity: "2 cups" },
-      { name: "Rose Water", quantity: "1 tsp" },
-      { name: "Cardamom", quantity: "4 pods" },
-      { name: "Ghee", quantity: "For frying" }
-    ]
+    description: "Traditional Indian sweet made with milk solids in sugar syrup",
+    image: "src/assets/cabbage-rolls.jpg",
+    category: {
+      id: 1,
+      name: "North Indian",
+      image: "https://storage.googleapis.com/chefkartimages/customer_app_assets/star_chef/north_indian.png",
+      isRecommendedForMealSuggestion: true
+    },
+    dishType: "SWEET",
+    forChefit: true,
+    forParty: true,
+    nameHi: "",
+    nameBn: "",
+    id: 33,
+    name: "Gulab Jamun"
   },
   {
-    id: 8,
-    name: "Chocolate Cake",
-    description: "Rich and moist chocolate cake with creamy frosting",
-    image: "src/assets/cabbage-rolls.jpg",
-    mealType: "DESSERT",
-    type: "VEG",
-    ingredients: [
-      { name: "Dark Chocolate", quantity: "200g" },
-      { name: "Flour", quantity: "1.5 cups" },
-      { name: "Sugar", quantity: "1 cup" },
-      { name: "Eggs", quantity: "3 large" },
-      { name: "Butter", quantity: "1/2 cup" },
-      { name: "Cocoa Powder", quantity: "1/4 cup" }
-    ]
-  },
-
-  // SIDES dishes
-  {
-    id: 9,
-    name: "Cabbage Rolls",
-    description: "Cabbage leaves stuffed with spiced rice and vegetables",
-    image: "src/assets/cabbage-rolls.jpg",
+    categoryId: 1,
     mealType: "SIDES",
     type: "VEG",
-    ingredients: [
-      { name: "Cabbage Leaves", quantity: "12 large" },
-      { name: "Basmati Rice", quantity: "1 cup" },
-      { name: "Mixed Vegetables", quantity: "1 cup" },
-      { name: "Tomato Sauce", quantity: "1/2 cup" },
-      { name: "Cumin Seeds", quantity: "1 tsp" },
-      { name: "Coriander", quantity: "2 tbsp" }
-    ]
-  },
-  {
-    id: 10,
-    name: "Naan Bread",
     description: "Soft and fluffy Indian flatbread perfect for dipping",
     image: "src/assets/cabbage-rolls.jpg",
-    mealType: "SIDES",
-    type: "VEG",
-    ingredients: [
-      { name: "All-purpose Flour", quantity: "2 cups" },
-      { name: "Yogurt", quantity: "1/4 cup" },
-      { name: "Baking Powder", quantity: "1 tsp" },
-      { name: "Salt", quantity: "1 tsp" },
-      { name: "Oil", quantity: "2 tbsp" },
-      { name: "Water", quantity: "As needed" }
-    ]
-  },
-  {
-    id: 11,
-    name: "Garlic Rice",
-    description: "Fragrant basmati rice cooked with garlic and herbs",
-    image: "src/assets/cabbage-rolls.jpg",
-    mealType: "SIDES",
-    type: "VEG",
-    ingredients: [
-      { name: "Basmati Rice", quantity: "2 cups" },
-      { name: "Garlic Cloves", quantity: "8 pieces" },
-      { name: "Bay Leaves", quantity: "2 pieces" },
-      { name: "Cumin Seeds", quantity: "1 tsp" },
-      { name: "Ghee", quantity: "2 tbsp" },
-      { name: "Salt", quantity: "To taste" }
-    ]
+    category: {
+      id: 1,
+      name: "North Indian",
+      image: "https://storage.googleapis.com/chefkartimages/customer_app_assets/star_chef/north_indian.png",
+      isRecommendedForMealSuggestion: true
+    },
+    dishType: "BREAD",
+    forChefit: true,
+    forParty: true,
+    nameHi: "",
+    nameBn: "",
+    id: 34,
+    name: "Naan Bread"
   }
 ];
