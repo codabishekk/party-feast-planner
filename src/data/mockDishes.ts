@@ -28,7 +28,7 @@ export interface Dish {
 }
 
 export const dishes: Dish[] = [
-  // Main Course dishes - Your provided data
+  // Main Course dishes with varied images
   {
     categoryId: 1,
     mealType: "MAIN COURSE",
@@ -54,7 +54,7 @@ export const dishes: Dish[] = [
     mealType: "MAIN COURSE",
     type: "VEG",
     description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
-    image: "src/assets/kadhai-paneer.jpg",
+    image: "src/assets/butter-chicken.jpg",
     category: {
       id: 1,
       name: "North Indian",
@@ -74,7 +74,7 @@ export const dishes: Dish[] = [
     mealType: "MAIN COURSE",
     type: "VEG",
     description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
-    image: "src/assets/kadhai-paneer.jpg",
+    image: "src/assets/palak-paneer.jpg",
     category: {
       id: 1,
       name: "North Indian",
@@ -94,7 +94,7 @@ export const dishes: Dish[] = [
     mealType: "MAIN COURSE",
     type: "VEG",
     description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
-    image: "src/assets/kadhai-paneer.jpg",
+    image: "src/assets/chole.jpg",
     category: {
       id: 1,
       name: "North Indian",
@@ -114,7 +114,7 @@ export const dishes: Dish[] = [
     mealType: "MAIN COURSE",
     type: "VEG",
     description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
-    image: "src/assets/kadhai-paneer.jpg",
+    image: "src/assets/biryani.jpg",
     category: {
       id: 1,
       name: "North Indian",
@@ -134,7 +134,7 @@ export const dishes: Dish[] = [
     mealType: "MAIN COURSE",
     type: "VEG",
     description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
-    image: "src/assets/kadhai-paneer.jpg",
+    image: "src/assets/basmati-rice.jpg",
     category: {
       id: 1,
       name: "North Indian",
@@ -174,7 +174,7 @@ export const dishes: Dish[] = [
     mealType: "MAIN COURSE",
     type: "VEG",
     description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
-    image: "src/assets/dal-makhani.jpg",
+    image: "src/assets/tandoori-chicken.jpg",
     category: {
       id: 1,
       name: "North Indian",
@@ -194,7 +194,7 @@ export const dishes: Dish[] = [
     mealType: "MAIN COURSE",
     type: "VEG",
     description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
-    image: "src/assets/dal-makhani.jpg",
+    image: "src/assets/kadhai-paneer.jpg",
     category: {
       id: 1,
       name: "North Indian",
@@ -214,7 +214,7 @@ export const dishes: Dish[] = [
     mealType: "MAIN COURSE",
     type: "VEG",
     description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
-    image: "src/assets/dal-makhani.jpg",
+    image: "src/assets/butter-chicken.jpg",
     category: {
       id: 1,
       name: "North Indian",
@@ -234,7 +234,7 @@ export const dishes: Dish[] = [
     mealType: "MAIN COURSE",
     type: "VEG",
     description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
-    image: "src/assets/kadhai-paneer.jpg",
+    image: "src/assets/palak-paneer.jpg",
     category: {
       id: 1,
       name: "North Indian",
@@ -254,7 +254,7 @@ export const dishes: Dish[] = [
     mealType: "MAIN COURSE",
     type: "VEG",
     description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
-    image: "src/assets/kadhai-paneer.jpg",
+    image: "src/assets/chole.jpg",
     category: {
       id: 1,
       name: "North Indian",
@@ -274,7 +274,7 @@ export const dishes: Dish[] = [
     mealType: "MAIN COURSE",
     type: "VEG",
     description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
-    image: "src/assets/kadhai-paneer.jpg",
+    image: "src/assets/biryani.jpg",
     category: {
       id: 1,
       name: "North Indian",
@@ -294,7 +294,7 @@ export const dishes: Dish[] = [
     mealType: "MAIN COURSE",
     type: "VEG",
     description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
-    image: "src/assets/dal-makhani.jpg",
+    image: "src/assets/basmati-rice.jpg",
     category: {
       id: 1,
       name: "North Indian",
@@ -334,7 +334,7 @@ export const dishes: Dish[] = [
     mealType: "MAIN COURSE",
     type: "VEG",
     description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
-    image: "src/assets/dal-makhani.jpg",
+    image: "src/assets/tandoori-chicken.jpg",
     category: {
       id: 1,
       name: "North Indian",
@@ -374,7 +374,7 @@ export const dishes: Dish[] = [
     mealType: "MAIN COURSE",
     type: "VEG",
     description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
-    image: "src/assets/kadhai-paneer.jpg",
+    image: "src/assets/butter-chicken.jpg",
     category: {
       id: 1,
       name: "North Indian",
@@ -394,7 +394,7 @@ export const dishes: Dish[] = [
     mealType: "MAIN COURSE",
     type: "VEG",
     description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
-    image: "src/assets/kadhai-paneer.jpg",
+    image: "src/assets/palak-paneer.jpg",
     category: {
       id: 1,
       name: "North Indian",
@@ -414,7 +414,7 @@ export const dishes: Dish[] = [
     mealType: "MAIN COURSE",
     type: "VEG",
     description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
-    image: "src/assets/dal-makhani.jpg",
+    image: "src/assets/chole.jpg",
     category: {
       id: 1,
       name: "North Indian",
@@ -434,7 +434,7 @@ export const dishes: Dish[] = [
     mealType: "MAIN COURSE",
     type: "VEG",
     description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
-    image: "src/assets/dal-makhani.jpg",
+    image: "src/assets/biryani.jpg",
     category: {
       id: 1,
       name: "North Indian",
@@ -454,7 +454,7 @@ export const dishes: Dish[] = [
     mealType: "MAIN COURSE",
     type: "VEG",
     description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
-    image: "src/assets/dal-makhani.jpg",
+    image: "src/assets/basmati-rice.jpg",
     category: {
       id: 1,
       name: "North Indian",
@@ -474,7 +474,7 @@ export const dishes: Dish[] = [
     mealType: "MAIN COURSE",
     type: "VEG",
     description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
-    image: "src/assets/kadhai-paneer.jpg",
+    image: "src/assets/dal-makhani.jpg",
     category: {
       id: 1,
       name: "North Indian",
@@ -494,7 +494,7 @@ export const dishes: Dish[] = [
     mealType: "MAIN COURSE",
     type: "VEG",
     description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
-    image: "src/assets/kadhai-paneer.jpg",
+    image: "src/assets/tandoori-chicken.jpg",
     category: {
       id: 1,
       name: "North Indian",
@@ -534,7 +534,7 @@ export const dishes: Dish[] = [
     mealType: "MAIN COURSE",
     type: "VEG",
     description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
-    image: "src/assets/dal-makhani.jpg",
+    image: "src/assets/butter-chicken.jpg",
     category: {
       id: 1,
       name: "North Indian",
@@ -554,7 +554,7 @@ export const dishes: Dish[] = [
     mealType: "MAIN COURSE",
     type: "VEG",
     description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
-    image: "src/assets/dal-makhani.jpg",
+    image: "src/assets/palak-paneer.jpg",
     category: {
       id: 1,
       name: "North Indian",
@@ -574,7 +574,7 @@ export const dishes: Dish[] = [
     mealType: "MAIN COURSE",
     type: "VEG",
     description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
-    image: "src/assets/dal-makhani.jpg",
+    image: "src/assets/chole.jpg",
     category: {
       id: 1,
       name: "North Indian",
@@ -594,7 +594,7 @@ export const dishes: Dish[] = [
     mealType: "MAIN COURSE",
     type: "VEG",
     description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
-    image: "src/assets/kadhai-paneer.jpg",
+    image: "src/assets/biryani.jpg",
     category: {
       id: 1,
       name: "North Indian",
@@ -614,7 +614,7 @@ export const dishes: Dish[] = [
     mealType: "MAIN COURSE",
     type: "VEG",
     description: "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
-    image: "src/assets/kadhai-paneer.jpg",
+    image: "src/assets/basmati-rice.jpg",
     category: {
       id: 1,
       name: "North Indian",
@@ -636,7 +636,7 @@ export const dishes: Dish[] = [
     mealType: "STARTER",
     type: "VEG",
     description: "Crispy vegetable spring rolls served with sweet and sour sauce",
-    image: "src/assets/cabbage-rolls.jpg",
+    image: "src/assets/samosas.jpg",
     category: {
       id: 2,
       name: "Chinese",
@@ -676,7 +676,7 @@ export const dishes: Dish[] = [
     mealType: "DESSERT",
     type: "VEG",
     description: "Traditional Indian sweet made with milk solids in sugar syrup",
-    image: "src/assets/cabbage-rolls.jpg",
+    image: "src/assets/gulab-jamun.jpg",
     category: {
       id: 1,
       name: "North Indian",
@@ -696,7 +696,7 @@ export const dishes: Dish[] = [
     mealType: "SIDES",
     type: "VEG",
     description: "Soft and fluffy Indian flatbread perfect for dipping",
-    image: "src/assets/cabbage-rolls.jpg",
+    image: "src/assets/roti.jpg",
     category: {
       id: 1,
       name: "North Indian",
