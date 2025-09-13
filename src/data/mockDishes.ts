@@ -47,7 +47,7 @@ export const dishes: Dish[] = [
     nameHi: "",
     nameBn: "",
     id: 1,
-    name: "Kadhai Paneer 1"
+    name: "Kadhai Paneer"
   },
   {
     categoryId: 1,
@@ -67,7 +67,7 @@ export const dishes: Dish[] = [
     nameHi: "",
     nameBn: "",
     id: 2,
-    name: "Kadhai Paneer 2"
+    name: "Butter Chicken"
   },
   {
     categoryId: 1,
@@ -87,7 +87,7 @@ export const dishes: Dish[] = [
     nameHi: "",
     nameBn: "",
     id: 3,
-    name: "Kadhai Paneer 3"
+    name: "Palak Paneer"
   },
   {
     categoryId: 1,
@@ -107,7 +107,7 @@ export const dishes: Dish[] = [
     nameHi: "",
     nameBn: "",
     id: 4,
-    name: "Kadhai Paneer 4"
+    name: "Chole Bhature"
   },
   {
     categoryId: 1,
@@ -127,7 +127,7 @@ export const dishes: Dish[] = [
     nameHi: "",
     nameBn: "",
     id: 5,
-    name: "Kadhai Paneer 5"
+    name: "Chicken Biryani"
   },
   {
     categoryId: 1,
@@ -147,7 +147,7 @@ export const dishes: Dish[] = [
     nameHi: "",
     nameBn: "",
     id: 6,
-    name: "Kadhai Paneer 6"
+    name: "Jeera Rice"
   },
   {
     categoryId: 1,
@@ -167,7 +167,7 @@ export const dishes: Dish[] = [
     nameHi: "",
     nameBn: "",
     id: 7,
-    name: "Kadhai Paneer 7"
+    name: "Dal Makhani"
   },
   {
     categoryId: 1,
@@ -187,7 +187,7 @@ export const dishes: Dish[] = [
     nameHi: "",
     nameBn: "",
     id: 8,
-    name: "Kadhai Paneer 8"
+    name: "Tandoori Chicken"
   },
   {
     categoryId: 1,
@@ -207,7 +207,7 @@ export const dishes: Dish[] = [
     nameHi: "",
     nameBn: "",
     id: 9,
-    name: "Kadhai Paneer 9"
+    name: "Matar Paneer"
   },
   {
     categoryId: 1,
@@ -227,7 +227,7 @@ export const dishes: Dish[] = [
     nameHi: "",
     nameBn: "",
     id: 10,
-    name: "Kadhai Paneer 10"
+    name: "Chicken Curry"
   },
   {
     categoryId: 1,
@@ -247,7 +247,7 @@ export const dishes: Dish[] = [
     nameHi: "",
     nameBn: "",
     id: 11,
-    name: "Kadhai Paneer 11"
+    name: "Spinach Paneer"
   },
   {
     categoryId: 1,
@@ -267,7 +267,7 @@ export const dishes: Dish[] = [
     nameHi: "",
     nameBn: "",
     id: 12,
-    name: "Kadhai Paneer 12"
+    name: "Punjabi Chole"
   },
   {
     categoryId: 1,
@@ -287,7 +287,7 @@ export const dishes: Dish[] = [
     nameHi: "",
     nameBn: "",
     id: 13,
-    name: "Kadhai Paneer 13"
+    name: "Mutton Biryani"
   },
   {
     categoryId: 1,
@@ -307,7 +307,7 @@ export const dishes: Dish[] = [
     nameHi: "",
     nameBn: "",
     id: 14,
-    name: "Kadhai Paneer 14"
+    name: "Pulao Rice"
   },
   {
     categoryId: 1,
@@ -327,7 +327,7 @@ export const dishes: Dish[] = [
     nameHi: "",
     nameBn: "",
     id: 15,
-    name: "Kadhai Paneer 15"
+    name: "Dal Tadka"
   },
   {
     categoryId: 1,
@@ -347,7 +347,7 @@ export const dishes: Dish[] = [
     nameHi: "",
     nameBn: "",
     id: 16,
-    name: "Kadhai Paneer 16"
+    name: "Chicken Tikka"
   },
   {
     categoryId: 1,
@@ -367,7 +367,7 @@ export const dishes: Dish[] = [
     nameHi: "",
     nameBn: "",
     id: 17,
-    name: "Kadhai Paneer 17"
+    name: "Paneer Butter Masala"
   },
   {
     categoryId: 1,
@@ -387,7 +387,7 @@ export const dishes: Dish[] = [
     nameHi: "",
     nameBn: "",
     id: 18,
-    name: "Kadhai Paneer 18"
+    name: "Chicken Masala"
   },
   {
     categoryId: 1,
@@ -407,7 +407,7 @@ export const dishes: Dish[] = [
     nameHi: "",
     nameBn: "",
     id: 19,
-    name: "Kadhai Paneer 19"
+    name: "Saag Paneer"
   },
   {
     categoryId: 1,
@@ -427,7 +427,7 @@ export const dishes: Dish[] = [
     nameHi: "",
     nameBn: "",
     id: 20,
-    name: "Kadhai Paneer 20"
+    name: "Bhindi Masala"
   },
   {
     categoryId: 1,
@@ -447,7 +447,7 @@ export const dishes: Dish[] = [
     nameHi: "",
     nameBn: "",
     id: 21,
-    name: "Kadhai Paneer 21"
+    name: "Veg Biryani"
   },
   {
     categoryId: 1,
@@ -467,7 +467,7 @@ export const dishes: Dish[] = [
     nameHi: "",
     nameBn: "",
     id: 22,
-    name: "Kadhai Paneer 22"
+    name: "Basmati Rice"
   },
   {
     categoryId: 1,
@@ -487,7 +487,7 @@ export const dishes: Dish[] = [
     nameHi: "",
     nameBn: "",
     id: 23,
-    name: "Kadhai Paneer 23"
+    name: "Black Dal"
   },
   {
     categoryId: 1,
@@ -507,7 +507,7 @@ export const dishes: Dish[] = [
     nameHi: "",
     nameBn: "",
     id: 24,
-    name: "Kadhai Paneer 24"
+    name: "Chicken Korma"
   },
   {
     categoryId: 1,
@@ -527,7 +527,7 @@ export const dishes: Dish[] = [
     nameHi: "",
     nameBn: "",
     id: 25,
-    name: "Kadhai Paneer 25"
+    name: "Paneer Tikka"
   },
   {
     categoryId: 1,
@@ -547,7 +547,7 @@ export const dishes: Dish[] = [
     nameHi: "",
     nameBn: "",
     id: 26,
-    name: "Kadhai Paneer 26"
+    name: "Chicken Vindaloo"
   },
   {
     categoryId: 1,
@@ -567,7 +567,7 @@ export const dishes: Dish[] = [
     nameHi: "",
     nameBn: "",
     id: 27,
-    name: "Kadhai Paneer 27"
+    name: "Paneer Makhani"
   },
   {
     categoryId: 1,
@@ -587,7 +587,7 @@ export const dishes: Dish[] = [
     nameHi: "",
     nameBn: "",
     id: 28,
-    name: "Kadhai Paneer 28"
+    name: "Aloo Gobi"
   },
   {
     categoryId: 1,
@@ -607,7 +607,7 @@ export const dishes: Dish[] = [
     nameHi: "",
     nameBn: "",
     id: 29,
-    name: "Kadhai Paneer 29"
+    name: "Prawn Biryani"
   },
   {
     categoryId: 1,
@@ -627,7 +627,7 @@ export const dishes: Dish[] = [
     nameHi: "",
     nameBn: "",
     id: 30,
-    name: "Kadhai Paneer 30"
+    name: "Saffron Rice"
   },
 
   // Additional sample dishes for other categories
